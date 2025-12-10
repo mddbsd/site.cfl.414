@@ -1,0 +1,19 @@
+//Componentes
+import { Outlet } from "react-router" 
+    /*
+        Outlet es un componente de react router, renderiza los componentes de las rutas hijas dentro de una ruta
+        padre. Permite el anidado de rutas, permitiendo que cada componente se renderice en un layout compartido
+        basado en el la URL actual.
+    */
+import BarraNav from "./layout/barranav"
+import PieDePagina from "./layout/piedepagina"
+
+export default function Layout(){
+    return(
+        <>
+        <BarraNav />
+        <Outlet />
+        <PieDePagina />
+        </>
+    )
+}
