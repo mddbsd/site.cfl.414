@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+/*
+    Con esta directiva @theme de tailwindcss, puedo definir cuales clases de utilidad (className)
+    existen en el proyecto.
+    Se pueden definir variables para utilizar como clases en los componentes.
+    
+    https://tailwindcss.com/docs/theme
+
+    Asi puedo cambiar los valores de las clases de manera global, --color-azulcfl se convertiria en
+    la clase bg-azulcfl.
+    Cambiando los valores de la funcion oklch() (es simplemente un selector de color) puedo ajustar
+    el color de todos los elementos que usen la clase bg-azulcfl
+
+    documentación oklch
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch
+
+*/
+@theme {
+    --color-azulcfl: oklch(42.4% 0.199 265.638);
+    --color-naranjacfl: oklch(66.6% 0.179 58.318);
+    --color-fondocfl: oklch(0 0 0 0)
+}
