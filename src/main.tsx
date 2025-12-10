@@ -9,7 +9,7 @@ import './css/general.css'
 //componentes
 import Layout from './componentes/layout'
 import Error404 from './componentes/errores/error404'
-import Landing from './landix'
+import Landing from './componentes/landing'
 
 const rutasCfl = createBrowserRouter([
   {
