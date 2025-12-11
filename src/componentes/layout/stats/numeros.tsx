@@ -39,7 +39,7 @@ export default function Numeros(){
      * 
      *      <Componente {...objeto} />
      * 
-     * Independientemente de como enviemos los props al componente, este los recibe como un 
+     * Independientemente de la cantidad de props que le enviemos al componente, este los recibe como un 
      * parametro (por lo que puede llamarse de cualquier manera). Accedemos al prop a travéz
      * del parametro ej: parametro.prop1 parametro.prop2 parametro.prop3.
      * También ṕodemos desestructurar la prop para acceder directamente
@@ -64,7 +64,7 @@ export default function Numeros(){
 
     return(
         <div id="stats" className="bg-slate-200 p-10">
-            <dl className="grid bpcasa:grid-cols-4 grid-cols-2 gap-15">
+            <dl className="grid bp750:grid-cols-4 grid-cols-2 gap-15">
                 {items.map((item, key) => (
                     <div key={key} className="text-azulcfl text-2xl text-center">
                         <Item {...item} />
