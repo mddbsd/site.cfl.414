@@ -19,5 +19,6 @@
 @theme {
     --color-azulcfl: oklch(42.4% 0.199 265.638);
     --color-naranjacfl: oklch(66.6% 0.179 58.318);
-    --color-fondocfl: oklch(0 0 0 0)
+    --color-fondocfl: oklch(0 0 0 0);
+    --breakpoint-bpcasa: 800px
 }

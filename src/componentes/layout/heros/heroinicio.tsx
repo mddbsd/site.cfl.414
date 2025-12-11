@@ -18,6 +18,6 @@ export default function HeroInicio(){
             <div id="heroimagen" className='max-[800px]:w-full max-[800px]:order-first'>
                 <img src={imgHero} className=''/>
             </div>
-        </div> 
+        </div>
     )
 }
