@@ -2,7 +2,7 @@
 import { Link } from 'react-router'
 
 //imagenes
-import imgHero from '../../../img/heroinicio-placeholder.jpeg'
+import imgHero from '../../img/heroinicio-placeholder.jpeg'
 
 export default function HeroInicio(){
     return(

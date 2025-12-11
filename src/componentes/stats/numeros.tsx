@@ -63,7 +63,7 @@ export default function Numeros(){
     }
 
     return(
-        <div id="stats" className="bg-slate-200 p-10">
+        <div id="stats" className="bg-griscfl p-10">
             <dl className="grid bp750:grid-cols-4 grid-cols-2 gap-15">
                 {items.map((item, key) => (
                     <div key={key} className="text-azulcfl text-2xl text-center">

@@ -11,9 +11,11 @@ import PieDePagina from "./layout/piedepagina"
 export default function Layout(){
     return(
         <>
-        <BarraNav />
-        <Outlet />
-        <PieDePagina />
+        <div className="flex flex-col h-screen overflow-hidden">
+            <BarraNav />
+            <Outlet />
+            <PieDePagina />
+        </div>
         </>
     )
 }

@@ -24,7 +24,7 @@
     --color-azulcfl: oklch(0.3177 0.1894 262.59);
     --color-naranjacfl: oklch(66.6% 0.179 58.318);
     --color-fondocfl: oklch(1 0 0);
-    --color-griscfl: oklch(0 0 0 0);
+    --color-griscfl: oklch(0.865 0 0);
     --breakpoint-bp750: 47rem;
     --breakpoint-bp600: 37.5rem
 }
