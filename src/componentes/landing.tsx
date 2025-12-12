@@ -3,6 +3,7 @@ import Destacados from "./heros/destacados"
 import HeroInicio from "./heros/heroinicio"
 import Llamada from "./heros/llamada"
 import Numeros from "./stats/numeros"
+import Final from "./heros/final"
 
 export default function Landing(){
     return(
@@ -18,6 +19,9 @@ export default function Landing(){
             </div>
             <div id="llamada">
                 <Llamada /> 
+            </div>
+            <div id="final">
+                <Final />
             </div>
         </div>
 
