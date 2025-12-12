@@ -16,19 +16,23 @@ import { MdDateRange } from "react-icons/md";
 function CursoDest({imagen, trayecto, resumen, duracion, mesInicio, matMaxima, matMinima}:CursoProps){
     return(
         <>
-        <div className=''>
-            <img src={imagen} className='w-max'/>
-            <div className='p-5'>
+        <div className='w-full h-50'>
+            <img src={imagen} className=' w-full h-full object-cover'/>
+        </div>
+        <div id="titulo" className='flex flex-col gap-5 items-center'>
+            <div className='p-2 mb-2'>
                 <h3 className='font-extrabold text-lg'>{trayecto}</h3>
-                <p className='text-sm text-justify'>{resumen}</p>
+                <p className='text-sm'>{resumen}</p>
             </div>
         </div>
-        <div className='flex justify-between'>
-            <span><FaRegClock />{duracion} meses</span>
-            <span><MdDateRange />{mesInicio}</span>
-            <span><IoPeople />{matMinima}-{matMaxima}</span>
+        <div id="datos" className='px-5 flex flex-col gap-5 mb-4'>
+            <div className='flex justify-between'>
+                <div className='flex items-center'><FaRegClock/><span>&nbsp;{duracion}meses</span></div>
+                <div className='flex items-center'><MdDateRange /><span>&nbsp;{mesInicio}</span></div>
+                <div className='flex items-center'><IoPeople /><span>&nbsp;{matMinima}-{matMaxima}</span></div>
+            </div>
         </div>
-        <button className='bg-naranjacfl rounded-2xl w-3/4 py-1'>Inscribirse</button>
+        <button className='bg-naranjacfl rounded-2xl mx-20'>Inscribirse</button>
         </>
     )
 }
@@ -67,9 +71,9 @@ export default function Destacados(){
                 <h2 className="text-azulcfl text-5xl font-bold">Cursos Destacados</h2>
                 <p className="text-gray-600 text-2xl">Descubrí nuestros ṕrogramas de formación profesional diseñados para las demandas del mercado actual</p>
             </div> 
-            <div id="galeriadestacados" className='flex justify-between'>
+            <div id="galeriadestacados" className='flex flex-wrap bp750:flex-nowrap justify-between'>
                 {cursosDestacados.map((curso, key)=>(
-                    <div id="cursodestacado" key={key} className='text-azulcfl shadow-xl/20 m-5 pb-2 flex flex-col items-center rounded-2xl overflow-hidden'>
+                    <div id="cursodestacado" key={key} className='text-azulcfl shadow-xl/20 m-5 pb-2 flex flex-col rounded-2xl overflow-hidden'>
                         <CursoDest {...curso} />
                     </div>
                 ))}
