@@ -1,6 +1,7 @@
 //componentes
 import Destacados from "./heros/destacados"
 import HeroInicio from "./heros/heroinicio"
+import Llamada from "./heros/llamada"
 import Numeros from "./stats/numeros"
 
 export default function Landing(){
@@ -14,6 +15,9 @@ export default function Landing(){
             </div>
             <div id="destacados">
                 <Destacados /> 
+            </div>
+            <div id="llamada">
+                <Llamada /> 
             </div>
         </div>
 
