@@ -21,7 +21,7 @@ export default function BarraNav(){
                 <span className="bp750:hidden font-black text-2xl">CFL-414</span>
             </div>
             <nav id="navegacion" className="align-middle text-center hidden bp750:block">
-                <div id="botones" className="flex justify-center gap-4 [&_#boton]:w-25 [&_#boton]:rounded-md [&_#boton]:py-2 [&_#boton]:transition-color [&_#boton]:duration-300 [&_#boton]:hover:bg-naranjacfl">
+                <div id="botones" className="flex justify-center gap-4 [&_#boton]:hover:bg-botonhover [&_#boton]:w-25 [&_#boton]:rounded-md [&_#boton]:py-2 [&_#boton]:transition-color [&_#boton]:duration-300">
                     <Link id="boton" to="/">Inicio</Link>
                     <Link id="boton" to="/">Cursos</Link>
                     <Link id="boton" to="/">Nosotros</Link>
@@ -31,7 +31,7 @@ export default function BarraNav(){
             <div id="logomtz" className="hidden bp750:block">
                 <img src={logoMtz} className="h-10 w-max"/>
             </div>
-            <div id="botonmenu" className="bp750:hidden text-3xl text-azulcfl">
+            <div id="botonmenu" className="text-txtterciario bp750:hidden text-3xl">
                 <LuMenu />
             </div>
 

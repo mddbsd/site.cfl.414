@@ -16,13 +16,13 @@ interface ItemsLlamada{
 function Item({icono: Icono, titulo, texto}: ItemsLlamada){
     return(
         <>
-            <div id="itemicono" className="bg-azulcfl p-2 ounded-md rounded-xl w-min text-white">
+            <div id="itemicono" className="bg-fondosecundario text-txtsecundario p-2 ounded-md rounded-xl w-min">
                 <Icono className="text-4xl"/>
             </div>
-            <div id="itemtitulo" className="text-azulcfl">
+            <div id="itemtitulo" className="text-txttitularprimario">
                 <h3 className="text-2xl">{titulo}</h3>
             </div>
-            <div id="itemtexto" className="text-griscfl">
+            <div id="itemtexto" className="text-txtprimario">
                 {texto}
             </div>
         </>
@@ -57,14 +57,14 @@ export default function Llamada(){
     }]
 
     return(
-        <div id="llamada" className=" bg-griscfl">
+        <div id="llamada" className=" bg-fondoterciario pb-10">
             <div id="texto" className="flex flex-col gap-10 text-center py-10">
-                <h2 className="text-azulcfl text-5xl font-bold">¿Por qué elegir CFL 414</h2>
-                <p className="text-gray-600 text-2xl">Formación de calidad con todos los beneficios que necesitas para tu desarrollo profesional</p>
+                <h2 className="text-txttitularprimario text-5xl font-bold">¿Por qué elegir CFL 414</h2>
+                <p className="text-txtprimario text-2xl">Formación de calidad con todos los beneficios que necesitas para tu desarrollo profesional</p>
             </div>
-            <div id="items" className="grid grid-cols-1 bp750:grid-cols-3 m-10">
+            <div id="items" className="grid grid-cols-1 bp750:grid-cols-3 mx-1">
                 {items.map((item, key) => (
-                    <div id="item" key={key} className="flex flex-col gap-2 bg-fondocfl p-5 m-5 rounded-xl shadow-xl/20">
+                    <div id="item" key={key} className="bg-fondoprimario flex flex-col gap-2 p-5 m-5 rounded-xl shadow-xl/20">
                         <Item {...item}/>
                     </div>
                 ))}

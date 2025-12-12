@@ -11,10 +11,16 @@ import PieDePagina from "./layout/piedepagina"
 export default function Layout(){
     return(
         <>
+        {/* 
+            Con estas clases, overflow-hidden y su child overflow-y-scroll, puedo mantener fija la barra
+            de navegación  
+        */}
         <div className="flex flex-col h-screen overflow-hidden">
             <BarraNav />
-            <Outlet />
-            <PieDePagina />
+            <div id="scroll" className="overflow-y-scroll">
+                <Outlet />
+                <PieDePagina />
+            </div>
         </div>
         </>
     )

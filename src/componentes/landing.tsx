@@ -7,22 +7,12 @@ import Final from "./heros/final"
 
 export default function Landing(){
     return(
-        <div id="envolturalanding" className="bg-fondocfl overflow-y-scroll">
-            <div id="hero">
-                <HeroInicio />
-            </div>
-            <div id="hero">
-                <Numeros />
-            </div>
-            <div id="destacados">
-                <Destacados /> 
-            </div>
-            <div id="llamada">
-                <Llamada /> 
-            </div>
-            <div id="final">
-                <Final />
-            </div>
+        <div id="envolturalanding" className="bg-fondoprimario">
+            <HeroInicio />
+            <Numeros />
+            <Destacados />
+            <Llamada />
+            <Final />
         </div>
 
     )

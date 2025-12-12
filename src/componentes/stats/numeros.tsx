@@ -56,17 +56,17 @@ export default function Numeros(){
     function Item ({arriba, abajo}:ItemsProps){
         return(
             <>
-            <dt className="text-6xl font-extrabold">{arriba}</dt>
-            <dd>{abajo}</dd>
+            <dt className="text-txtterciario text-6xl font-extralight">{arriba}</dt>
+            <dd className="text-txtprimario">{abajo}</dd>
             </>
         )
     }
 
     return(
-        <div id="stats" className="bg-griscfl p-10">
+        <div id="stats" className="bg-fondoterciario p-10">
             <dl className="grid bp750:grid-cols-4 grid-cols-2 gap-15">
                 {items.map((item, key) => (
-                    <div key={key} className="text-azulcfl text-2xl text-center">
+                    <div key={key} className="text-2xl text-center">
                         <Item {...item} />
                     </div>
                     
