@@ -17,7 +17,7 @@ export default function BarraNav(){
     return(
         <div id="barranav" className="flex justify-between items-center p-2">
             <div id="logocfl" className="flex items-center ml-5 bp750:ml-10">
-                <img src={logoCfl} className="h-12 bp750:h-25 w-max "/>
+                <img src={logoCfl} className="h-8 bp750:h-25 w-max "/>
                 <span className="bp750:hidden font-black text-2xl">CFL-414</span>
             </div>
             <nav id="navegacion" className="align-middle text-center hidden bp750:block">
