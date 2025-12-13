@@ -10,6 +10,10 @@ import './css/general.css'
 import Layout from './componentes/layout'
 import Error404 from './componentes/errores/error404'
 import Landing from './componentes/landing'
+import Cursos from './componentes/cursos'
+import Nosotros from './componentes/nosotros'
+import Contacto from './componentes/contacto'
+import CursoDetalle from './componentes/galeria/cursodetalle'
 
 const rutasCfl = createBrowserRouter([
   {
@@ -20,9 +24,24 @@ const rutasCfl = createBrowserRouter([
       {
         index: true,
         Component: Landing
+      },
+      {
+        path: "/cursos",
+        Component: Cursos
+      },
+      {
+        path: "/cursos/:id",
+        Component: CursoDetalle
+      },
+      {
+        path: "/nosotros",
+        Component: Nosotros
+      },
+      {
+        path: "/contacto",
+        Component: Contacto
       }
     ]
-
   }
 ])
 
