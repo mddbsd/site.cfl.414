@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 /*
     Con esta directiva @theme de tailwindcss, puedo definir cuales clases de utilidad (className)
@@ -49,3 +50,15 @@
     --breakpoint-bp750: 47rem;
     --breakpoint-bp600: 37.5rem;
 }
+
+@layer utilities {
+      /* Esconde el scrollbar en Chrome, Safari y Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Esconde el scrollbar en IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE y Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
+  }

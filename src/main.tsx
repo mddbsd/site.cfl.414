@@ -15,6 +15,9 @@ import Nosotros from './componentes/nosotros'
 import Contacto from './componentes/contacto'
 import CursoDetalle from './componentes/galeria/cursodetalle'
 
+//https://niaxus.com/2025/03/15/como-implementar-lazy-loading-en-react/
+//hay que implementar esto
+
 const rutasCfl = createBrowserRouter([
   {
     path: "/",

@@ -7,6 +7,10 @@
     "module": "ESNext",
     "types": ["vite/client"],
     "skipLibCheck": true,
+    
+    /* Habilitan las importaciones de archivos json, aplica los tipos segun los datos del archivo*/
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",

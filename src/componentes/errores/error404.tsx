@@ -1,3 +1,6 @@
+//Originalmente era solo un error 404... le quedó el nombre todo esto se cambia en la 
+//refactorización
+//https://www.ibm.com/mx-es/think/topics/code-refactoring
 import { useNavigate, useRouteError, isRouteErrorResponse } from "react-router"
 interface PropsTarjeta{
     estado?: number
