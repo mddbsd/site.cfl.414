@@ -13,6 +13,7 @@
         "descripcion":"",
         "estaDisponible":true,
         "esDestacado":false,
+        "matriculaMin":15,
         "matriculaMax":20,
         "centro":"Sede Central",
         "sede":{
@@ -37,6 +38,7 @@
         "descripcion":"",
         "estaDisponible":true,
         "esDestacado":false,
+        "matriculaMin":15,
         "matriculaMax":20,
         "centro":"Sede Central",
         "sede":{
@@ -61,6 +63,7 @@
         "descripcion":"",
         "estaDisponible":true,
         "esDestacado":false,
+        "matriculaMin":15,
         "matriculaMax":20,
         "centro":"Sede Central",
         "sede":{
@@ -86,6 +89,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":0,
@@ -110,6 +114,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":4,
@@ -134,6 +139,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":0,
@@ -158,6 +164,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":2,
@@ -182,6 +189,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":4,
@@ -206,6 +214,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":1,
@@ -230,6 +239,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":1,
@@ -254,6 +264,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":0,
@@ -278,6 +289,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":0,
@@ -302,6 +314,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":4,
@@ -326,6 +339,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":0,
@@ -350,6 +364,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":0,
@@ -374,6 +389,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":0,
@@ -398,6 +414,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":3,
@@ -422,6 +439,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":1,
@@ -446,6 +464,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":0,
@@ -470,14 +489,15 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
-                "idSede":5,
-                "nombre":"Suetra",
-                "localidad":"San Justo",
-                "direccion":"Jose Francisco Marcon 3385",
-                "gps":[-34.681288249151759, -58.55861945767306]
-            }
+                "idSede":4,
+                "nombre":"Polo Productivo",
+                "localidad":"La Tablada",
+                "direccion":"Av. Crovara 2045",
+                "gps":[-34.685211938416685, -58.51913752408135]
+            }        
     },
     {
         "idCurso":20,
@@ -494,6 +514,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":4,
@@ -518,6 +539,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":1,
@@ -542,6 +564,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
                 "idSede":0,
@@ -566,6 +589,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Anexo Catan",
         "sede":{
                 "idSede":1,
@@ -590,6 +614,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Anexo Catan",
         "sede":{
                 "idSede":1,
@@ -614,6 +639,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Anexo Catan",
         "sede":{
                 "idSede":1,
@@ -638,6 +664,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Anexo Catan",
         "sede":{
                 "idSede":3,
@@ -662,6 +689,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Anexo Catan",
         "sede":{
                 "idSede":3,
@@ -686,6 +714,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Anexo Catan",
         "sede":{
                 "idSede":3,
@@ -710,6 +739,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Anexo Catan",
         "sede":{
                 "idSede":5,
@@ -734,6 +764,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Anexo Catan",
         "sede":{
                 "idSede":0,
@@ -758,6 +789,7 @@
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
+        "matriculaMin":15,
         "centro":"Anexo Catan",
         "sede":{
                 "idSede":0,

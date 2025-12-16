@@ -1,24 +1,10 @@
-//Thumbnails
-import ThumbCategoria from '../img/iconos/thumbs'
-
+//datos cursos
 import cursosJson from '../json/cursos.json'
 
-import type { TarjetaCursoProps } from '../ts/interfaces'
+//componentes
+import TarjetaCurso from './galeria/tarjetacurso'
 
-function Curso(props: TarjetaCursoProps){
-    return(
-        <div id="curso" className='bg-fondoterciario shadow-2xl flex flex-col justify-center rounded-2xl overflow-hidden hover:-translate-y-3 transform duration-150 shrink-0 snap-center'>
-            <div className='w-full h-50 flex flex-col rounded-2xl'>
-                <ThumbCategoria thumb={props.thumb} className='w-full h-full object-cover' />
-            </div>
-            <div className='p-5'>
-                <p className='text-2xl'>{props.trayecto}</p>
-                <p>{props.resumen}</p>
-            </div>
-            <button className='bg-botonhover mb-5 mx-5 rounded-md'>Ver detalles</button>
-        </div>
-    )
-}
+//interfaces
 
 export default function Cursos(){
     //Los cursos estan en un archivo JSON, estos van a venir desde una API cuando tenga el backend
@@ -28,22 +14,49 @@ export default function Cursos(){
     }
 
     return(
-        <div id="cursos" className='bg-fondosecundario'>
-            <h1></h1>
-            <h2 className='text-txtsecundario font-extrabold text-5xl '>Lomas del Mirador</h2>
-            <div id="cursosnuevos" className='flex gap-3 p-5 scroll-auto snap-x overflow-y-scroll no-scrollbar'>
-                
+        <div id="cursos" className='bg-fondosecundario py-5'>
+            <h1 className='text-txtsecundario text-center text-6xl font-extrabold'>Cursos 2026</h1>
+            <h2 className='text-txtsecundario text-center bp750:text-left font-extrabold text-4xl ml-5'>Lomas del Mirador</h2>
+            <div id="galeriacursos" className='grid auto-cols-max grid-flow-col mb-8 snap-x overflow-y-scroll no-scrollbar'> {/*flex gap-3 p-5 scroll-auto snap-x overflow-y-scroll no-scrollbar */}
                 {filtro("Lomas del Mirador").map((curso) => (
-                    <div key={curso.idCurso}><Curso id={curso.idCurso} trayecto={curso.trayecto} thumb={curso.thumb} resumen={curso.resumen} mesInicio={curso.mes} cargaHoraria={curso.cargaHoraria} localidad={curso.sede.localidad}/></div>                  
+                    <div id="curso" key={curso.idCurso} className='bg-fondoprimario shadow-xl/20 m-5 pb-2 flex flex-col rounded-2xl overflow-hidden shrink-0 snap-center w-100'>
+                        <TarjetaCurso id={curso.idCurso} trayecto={curso.trayecto} thumb={curso.thumb} resumen={curso.resumen} mes={curso.mes} cargaHoraria={curso.cargaHoraria} localidad={curso.sede.localidad} matriculaMax={curso.matriculaMax} matriculaMin={curso.matriculaMin}/>
+                    </div>                  
                 ))}
             </div>
-            <h2 className='text-txtsecundario font-extrabold text-5xl '>Gonzales Catán</h2>
-            <div className='flex gap-3 p-5 scroll-auto snap-x overflow-y-scroll no-scrollbar'>
+            <h2 className='text-txtsecundario text-center bp750:text-left font-extrabold text-4xl ml-5'>Gonzales Catan</h2>
+            <div id="galeriacursos" className='grid auto-cols-max grid-flow-col mb-8 snap-x overflow-y-scroll no-scrollbar'> {/*flex gap-3 p-5 scroll-auto snap-x overflow-y-scroll no-scrollbar */}
                 {filtro("Gonzales Catan").map((curso) => (
-
-                    <div key={curso.idCurso}><Curso id={curso.idCurso} trayecto={curso.trayecto} thumb={curso.thumb} resumen={curso.resumen} mesInicio={curso.mes} cargaHoraria={curso.cargaHoraria} localidad={curso.sede.localidad}/></div>  
+                    <div id="curso" key={curso.idCurso} className='bg-fondoprimario shadow-xl/20 m-5 pb-2 flex flex-col rounded-2xl overflow-hidden shrink-0 snap-center w-100'>
+                        <TarjetaCurso id={curso.idCurso} trayecto={curso.trayecto} thumb={curso.thumb} resumen={curso.resumen} mes={curso.mes} cargaHoraria={curso.cargaHoraria} localidad={curso.sede.localidad} matriculaMax={curso.matriculaMax} matriculaMin={curso.matriculaMin}/>
+                    </div>                  
                 ))}
             </div>
+            <h2 className='text-txtsecundario text-center bp750:text-left font-extrabold text-4xl ml-5'>Gregorio de Laferrere</h2>
+            <div id="galeriacursos" className='grid auto-cols-max grid-flow-col mb-8 snap-x overflow-y-scroll no-scrollbar'> {/*flex gap-3 p-5 scroll-auto snap-x overflow-y-scroll no-scrollbar */}
+                {filtro("Laferrere").map((curso) => (
+                    <div id="curso" key={curso.idCurso} className='bg-fondoprimario shadow-xl/20 m-5 pb-2 flex flex-col rounded-2xl overflow-hidden shrink-0 snap-center w-100'>
+                        <TarjetaCurso id={curso.idCurso} trayecto={curso.trayecto} thumb={curso.thumb} resumen={curso.resumen} mes={curso.mes} cargaHoraria={curso.cargaHoraria} localidad={curso.sede.localidad} matriculaMax={curso.matriculaMax} matriculaMin={curso.matriculaMin}/>
+                    </div>                  
+                ))}
+            </div>
+            <h2 className='text-txtsecundario text-center bp750:text-left font-extrabold text-4xl ml-5'>San Justo</h2>
+            <div id="galeriacursos" className='grid auto-cols-max grid-flow-col mb-8 snap-x overflow-y-scroll no-scrollbar'> {/*flex gap-3 p-5 scroll-auto snap-x overflow-y-scroll no-scrollbar */}
+                {filtro("San Justo").map((curso) => (
+                    <div id="curso" key={curso.idCurso} className='bg-fondoprimario shadow-xl/20 m-5 pb-2 flex flex-col rounded-2xl overflow-hidden shrink-0 snap-center w-100'>
+                        <TarjetaCurso id={curso.idCurso} trayecto={curso.trayecto} thumb={curso.thumb} resumen={curso.resumen} mes={curso.mes} cargaHoraria={curso.cargaHoraria} localidad={curso.sede.localidad} matriculaMax={curso.matriculaMax} matriculaMin={curso.matriculaMin}/>
+                    </div>                  
+                ))}
+            </div>
+            <h2 className='text-txtsecundario text-center bp750:text-left font-extrabold text-4xl ml-5'>La Tablada</h2>
+            <div id="galeriacursos" className='grid auto-cols-max grid-flow-col mb-8 snap-x overflow-y-scroll no-scrollbar'> {/*flex gap-3 p-5 scroll-auto snap-x overflow-y-scroll no-scrollbar */}
+                {filtro("La Tablada").map((curso) => (
+                    <div id="curso" key={curso.idCurso} className='bg-fondoprimario shadow-xl/20 m-5 pb-2 flex flex-col rounded-2xl overflow-hidden shrink-0 snap-center w-100'>
+                        <TarjetaCurso id={curso.idCurso} trayecto={curso.trayecto} thumb={curso.thumb} resumen={curso.resumen} mes={curso.mes} cargaHoraria={curso.cargaHoraria} localidad={curso.sede.localidad} matriculaMax={curso.matriculaMax} matriculaMin={curso.matriculaMin}/>
+                    </div>                  
+                ))}
+            </div>
+            
         </div>
     )
 }

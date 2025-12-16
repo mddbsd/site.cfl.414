@@ -48,7 +48,9 @@ export interface TarjetaCursoProps{
     trayecto: string
     thumb: string
     resumen?: string
-    mesInicio : string
+    mes : string
     cargaHoraria: number
+    matriculaMax: number
+    matriculaMin: number
     localidad: string
 }
