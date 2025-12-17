@@ -1,10 +1,12 @@
 //datos cursos
+
 import cursosJson from '../json/cursos.json'
 
 //componentes
 import TarjetaCurso from './galeria/tarjetacurso'
 
-//interfaces
+//librerias y utilidades
+
 
 export default function Cursos(){
     //Los cursos estan en un archivo JSON, estos van a venir desde una API cuando tenga el backend
@@ -12,6 +14,7 @@ export default function Cursos(){
     function filtro(filtro: string){
         return cursosJson.filter(((filtrados) => {return filtrados.sede.localidad === filtro}))
     }
+
 
     return(
         <div id="cursos" className='bg-fondosecundario py-5'>

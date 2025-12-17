@@ -1,7 +1,7 @@
 //librerias y utiliadades
-import { StrictMode } from 'react'
+import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router'
+import { createBrowserRouter, RouterProvider, ScrollRestoration, useLocation } from 'react-router'
 
 //estilos
 import './css/general.css'
@@ -17,6 +17,7 @@ import CursoDetalle from './componentes/galeria/cursodetalle'
 
 //https://niaxus.com/2025/03/15/como-implementar-lazy-loading-en-react/
 //hay que implementar esto
+
 
 const rutasCfl = createBrowserRouter([
   {
