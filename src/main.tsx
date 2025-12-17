@@ -1,7 +1,7 @@
 //librerias y utiliadades
-import { StrictMode, useEffect } from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider, ScrollRestoration, useLocation } from 'react-router'
+import { createBrowserRouter, RouterProvider } from 'react-router'
 
 //estilos
 import './css/general.css'
