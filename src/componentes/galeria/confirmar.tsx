@@ -85,8 +85,8 @@ export default function Confirmar(){
                     <p className="text-6xl text-txtprimario font-bold">{datosCurso.trayecto}</p>
                     <p>Por favor, confirme que los datos ingresados sean correctos</p>
                 </div>
-                <div id="datosalumno" className="grid grid-cols-3 **:mb-5">
-                    <p>Nombre:{datosUsuario.nombre}</p>
+                <div id="datosalumno" className="grid grid-cols-3 **:mb-5 m-5">
+                    <p>Nombre: <span>{datosUsuario.nombre}</span></p>
                     <p>Apellido: {datosUsuario.apellido}</p>
                     <p>DNI:{datosUsuario.dni}</p>
                     <p>CUIL:{datosUsuario.cuil}</p>
