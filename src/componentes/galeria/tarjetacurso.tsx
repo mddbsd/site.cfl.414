@@ -9,6 +9,11 @@ import { MdDateRange } from "react-icons/md";
 //thumbs
 import ThumbCategoria from '../../img/iconos/thumbs'
 
+<<<<<<< HEAD
+=======
+//componentes y utilidades
+import { Link } from "react-router";
+>>>>>>> imp/detallecurso
 /*
     Desactive la carga horaria de la ficha a pedido del cliente, la dejo comentada por si quiere
     reemplazarla por otra cosa
@@ -17,7 +22,11 @@ export default function TarjetaCurso(props: TarjetaCursoProps){
     return(
         <>
         <div className='w-full h-50 aspect-square'>
+<<<<<<< HEAD
             <ThumbCategoria thumb={props.thumb} className="w-full h-full object-cover" />
+=======
+            <ThumbCategoria imagen={props.thumb} className="w-full h-full object-cover" />
+>>>>>>> imp/detallecurso
         </div>
         <div id="titulo" className=' flex flex-col gap-5 items-center text-center'>
             <div className='p-2 mb-2'>
@@ -32,7 +41,11 @@ export default function TarjetaCurso(props: TarjetaCursoProps){
                 <div id="detalle"><IoPeople id="icono"/><span>&nbsp;{props.matriculaMin}-{props.matriculaMax}</span></div>
             </div>
         </div>
+<<<<<<< HEAD
         <button className='bg-botonhover rounded-md mx-20 p-3'>Inscribirse</button>
+=======
+        <Link to={`/cursos/${props.id}/detalle`} className='bg-botonhover rounded-md mx-20 p-3 text-center'>Inscribirse</Link>
+>>>>>>> imp/detallecurso
         </>
     )
 }

@@ -12,6 +12,10 @@ export interface CursosJson{
     descripcion?: string
     estaDisponible: boolean
     esDestacado: boolean
+<<<<<<< HEAD
+=======
+    matriculaMin: number
+>>>>>>> imp/detallecurso
     matriculaMax: number
     centro: string
     sede:{
@@ -23,6 +27,7 @@ export interface CursosJson{
     } 
 }
 
+<<<<<<< HEAD
 export interface CursoProps{
     id: number
     trayecto: string
@@ -47,6 +52,12 @@ export interface TarjetaCursoProps{
     id: number
     trayecto: string
     thumb: string
+=======
+export interface TarjetaCursoProps{
+    id: number
+    trayecto: string
+    thumb?: string
+>>>>>>> imp/detallecurso
     resumen?: string
     mes : string
     cargaHoraria: number
@@ -54,3 +65,37 @@ export interface TarjetaCursoProps{
     matriculaMin: number
     localidad: string
 }
+<<<<<<< HEAD
+=======
+
+export interface ImagenProps{
+    idCurso?: number
+    imagen?: string
+    className?: string
+}
+
+export interface Alumno{
+    curso: string
+    nombre: string
+    apellido: string
+    genero: string
+    dni: string
+    cuil: string
+    email: string
+    telefono1: string
+    telefono2: string
+    nacimiento: string
+    nacionalidad: string
+    localidad: string
+    dir_calle: string
+    dir_numero: string
+    dir_pisodpto: string
+    estudios: string
+}
+
+export interface AlumnoPrueba {
+    curso: string
+    nombre: string
+    apellido: string
+}
+>>>>>>> imp/detallecurso

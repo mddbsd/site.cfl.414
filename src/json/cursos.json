@@ -10,7 +10,11 @@
         "thumb":"cuero",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMin":15,
@@ -35,7 +39,11 @@
         "thumb":"cuero",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMin":15,
@@ -60,7 +68,11 @@
         "thumb":"turistico",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMin":15,
@@ -85,7 +97,11 @@
         "thumb":"cuero",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -110,7 +126,11 @@
         "thumb":"comunica",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -135,7 +155,11 @@
         "thumb":"estetica",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -160,7 +184,11 @@
         "thumb":"costura",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -185,7 +213,11 @@
         "thumb":"turistico",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -210,7 +242,11 @@
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -235,7 +271,11 @@
         "thumb":"turistico",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -260,7 +300,11 @@
         "thumb":"tec",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -285,7 +329,11 @@
         "thumb":"tec",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -310,7 +358,11 @@
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -335,7 +387,11 @@
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -360,7 +416,11 @@
         "thumb":"construccion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -385,7 +445,11 @@
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -410,7 +474,11 @@
         "thumb":"turistico",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -435,7 +503,11 @@
         "thumb":"estetica",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -460,7 +532,11 @@
         "thumb":"estetica",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -485,7 +561,11 @@
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -510,7 +590,11 @@
         "thumb":"tec",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -535,7 +619,11 @@
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -560,7 +648,11 @@
         "thumb":"construccion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -585,7 +677,11 @@
         "thumb":"electronico",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -610,7 +706,11 @@
         "thumb":"construccion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -635,7 +735,11 @@
         "thumb":"estetica",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -660,7 +764,11 @@
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -685,7 +793,11 @@
         "thumb":"comunica",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -710,7 +822,11 @@
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -735,7 +851,11 @@
         "thumb":"estetica",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -760,7 +880,11 @@
         "thumb":"estetica",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,
@@ -785,7 +909,11 @@
         "thumb":"tec",
         "imagen":"",
         "resumen":"",
+<<<<<<< HEAD
         "descripcion":"",
+=======
+        "descripcion":"Sin contenido momentaneamente",
+>>>>>>> imp/detallecurso
         "estaDisponible":true,
         "esDestacado":false,
         "matriculaMax":20,

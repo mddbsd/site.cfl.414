@@ -11,6 +11,7 @@ import mec from './icon_mec.jpg'
 import tec from './icon_tec.jpg'
 import turistico from './icon_turistico.jpg'
 
+<<<<<<< HEAD
 interface ThumbProps{
     thumb: string
     className?: string
@@ -19,6 +20,13 @@ interface ThumbProps{
 export default function ThumbCategoria( {thumb, className}: ThumbProps ){
     function seleCat(): string {
         switch(thumb){
+=======
+import type { ImagenProps } from '../../ts/interfaces'
+
+export default function ThumbCategoria( {imagen, className}: ImagenProps ){
+    function seleCat(): string {
+        switch(imagen){
+>>>>>>> imp/detallecurso
             case "construccion":
                 return(construccion)
                 break;

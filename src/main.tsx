@@ -1,7 +1,12 @@
 //librerias y utiliadades
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+<<<<<<< HEAD
 import { createBrowserRouter, RouterProvider } from 'react-router'
+=======
+import { createBrowserRouter, RouterProvider, type DataRouter } from 'react-router'
+import { loaderCursoDetalle, loaderGaleria, actionConfirmar } from './ts/loaders'
+>>>>>>> imp/detallecurso
 
 //estilos
 import './css/general.css'
@@ -14,12 +19,22 @@ import Cursos from './componentes/cursos'
 import Nosotros from './componentes/nosotros'
 import Contacto from './componentes/contacto'
 import CursoDetalle from './componentes/galeria/cursodetalle'
+<<<<<<< HEAD
+=======
+import Confirmar from './componentes/galeria/confirmar'
+import Exito from './componentes/galeria/exito'
+import OutletEnviarDatos from './componentes/outletEnviarDatos'
+>>>>>>> imp/detallecurso
 
 //https://niaxus.com/2025/03/15/como-implementar-lazy-loading-en-react/
 //hay que implementar esto
 
 
+<<<<<<< HEAD
 const rutasCfl = createBrowserRouter([
+=======
+const rutasCfl: DataRouter = createBrowserRouter([
+>>>>>>> imp/detallecurso
   {
     path: "/",
     Component: Layout,
@@ -31,11 +46,38 @@ const rutasCfl = createBrowserRouter([
       },
       {
         path: "/cursos",
+<<<<<<< HEAD
         Component: Cursos
       },
       {
         path: "/cursos/:id",
         Component: CursoDetalle
+=======
+        Component: Cursos,
+        //Los loaders permiten enviar datos al componente.
+        //https://reactrouter.com/start/framework/data-loading
+        //https://reactrouter.com/start/data/data-loading
+        loader: loaderGaleria
+      },
+      {
+        path: "/cursos/:cursoId",
+        Component: OutletEnviarDatos,
+        loader: loaderCursoDetalle,
+        children:[
+          {
+            path: "/cursos/:cursoId/detalle",
+            Component: CursoDetalle,
+          },
+          {
+            path: "/cursos/:cursoId/detalle/confirmar",
+            Component: Confirmar,
+            action: actionConfirmar
+          },
+          {
+            path: "/cursos/:cursoId/detalle/exito",
+            Component: Exito
+          }]
+>>>>>>> imp/detallecurso
       },
       {
         path: "/nosotros",
@@ -43,7 +85,11 @@ const rutasCfl = createBrowserRouter([
       },
       {
         path: "/contacto",
+<<<<<<< HEAD
         Component: Contacto
+=======
+        Component: Contacto,
+>>>>>>> imp/detallecurso
       }
     ]
   }
