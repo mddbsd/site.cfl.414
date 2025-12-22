@@ -3,7 +3,7 @@ import { Form } from "react-router"
 import { formatHoras } from "../../ts/funciones";
 
 //tipos/interfaces
-import type { Alumno, CursosJson } from "../../ts/interfaces";
+import type { CursosJson } from "../../ts/interfaces";
 
 //componentes<
 import ImagenCurso from "../../img/imagenescursos/imagencurso";
