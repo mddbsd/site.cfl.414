@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-export default function CursoDetalle(){
-    return(
-        <div>detalle del curso</div>
-=======
 //librerias y utilidades
 import { Form } from "react-router"
 import { formatHoras } from "../../ts/funciones";
@@ -85,6 +80,5 @@ export default function CursoDetalle(){
                 </div>  
             </section>
         </div>
->>>>>>> imp/detallecurso
     )
 }

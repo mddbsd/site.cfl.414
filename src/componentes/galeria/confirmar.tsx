@@ -2,7 +2,6 @@ import { useActionData } from "react-router";
 import { useNavigate } from "react-router";
 import type { Alumno } from "../../ts/interfaces";
 import { useCurso } from "../outletEnviarDatos";
-import { formatHoras } from "../../ts/funciones";
 //props: todos los datos del usuario,
 //en este componente va el captcha y la logica de subida a la API
 
