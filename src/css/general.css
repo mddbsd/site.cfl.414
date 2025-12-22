@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+/*
+    Con esta directiva @theme de tailwindcss, puedo definir cuales clases de utilidad (className)
+    existen en el proyecto.
+    Se pueden definir variables para utilizar como clases en los componentes.
+    
+    https://tailwindcss.com/docs/theme
+
+    Asi puedo cambiar los valores de las clases de manera global, --color-azulcfl se convertiria en
+    la clase bg-azulcfl.
+    Cambiando los valores de la funcion oklch() (es simplemente un selector de color) puedo ajustar
+    el color de todos los elementos que usen la clase bg-azulcfl
+
+    documentación oklch
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch
+
+    de aca podemos sacar los colores para usar en la funcion
+
+    https://oklch.com
+
+    conversor de px a rem
+    
+    https://nekocalc.com/px-to-rem-converter
+*/
+@theme {
+    --cflazul: oklch(0.6157 0.2742 260.48);
+    --cflnaranja: oklch(66.6% 0.179 58.318);
+    --cflgris1: oklch(0.8887 0 303);
+    --cflgris2: oklch(0.224 0 0);
+    --cflblanco: oklch(1 0 0);
+
+    --color-fondoprimario: var(--cflblanco);
+    --color-txttitularprimario: var(--cflazul);
+    --color-txtprimario: var(--cflgris2);
+
+    --color-fondosecundario: var(--cflazul);
+    --color-txttitularsecundario: var(--cflblanco);
+    --color-txtsecundario: var(--cflblanco);
+
+    --color-fondoterciario: var(--cflgris1);
+    --color-txttitularterciario: var(--cflblanco);
+    --color-txtterciario: var(--cflazul);
+    
+    --color-botonprimario: var(--cflazul);
+    --color-botonsecundario: var(--cflblanco);
+    --color-botonhover: var(--cflnaranja);
+
+    --breakpoint-bp750: 47rem;
+    --breakpoint-bp600: 37.5rem;
+}
+
+@layer utilities {
+      /* Esconde el scrollbar en Chrome, Safari y Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Esconde el scrollbar en IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE y Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
+  }
