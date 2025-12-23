@@ -3,11 +3,12 @@ import { useNavigate } from "react-router";
 import type { Alumno } from "../../ts/interfaces";
 import { Link } from "react-router";
 import { useCurso } from "../outletEnviarDatos";
+import { randomId } from "../../ts/funciones";
 //props: todos los datos del usuario,
 //en este componente va el captcha y la logica de subida a la API
 
 /**
- * Con esta funcion me aseguro de que los datos del formulario esten llenos
+ * Con esta funcion me aseguro de que el formulario tenga datos.
  * Si el formulario esta vacio devuelve un error con status 404 y redirige
  * al componente de error
  * https://reactrouter.com/6.30.2/route/error-element
@@ -20,7 +21,14 @@ function cargaDatos(){
     }
     return useActionData()
 }
-
+/**
+ * Recibe los datos formateados y la url con la key de google
+ * los datos se suben en formato Formulario, armamos el payload con el objeto datosGoogle
+ * luego se llama a la api con baseUrl y el payload como cuerpo
+ * 
+ * @param datosGoogle datos formateados
+ * @param baseURL url con la key de google
+ */
 async function validaConexionGoogle( datosGoogle: {[key: string]: string}, baseURL: string){
     const payload = new FormData()
     Object.keys(datosGoogle).forEach((key) => {
@@ -47,6 +55,7 @@ export default function Confirmar(){
     const datosCurso = useCurso();
     const navegar = useNavigate();
     const fecha: Date = new Date();
+    const id = randomId();
     //este objeto se almacena la informacion formateada para la api de google
     //El objeto necesita un formato para ser leido por el script de google, 
     //Cada atributo representa el nombre de la columna donde va a ser almacenado 
@@ -71,17 +80,17 @@ export default function Confirmar(){
         "localidad":datosUsuario.localidad,
         "direccion":datosUsuario.dir_calle + " " + datosUsuario.dir_numero + " " + (datosUsuario.dir_pisodpto != "" ? "dpto: " + datosUsuario.dir_pisodpto  : ""),
         "estudios":datosUsuario.estudios,
+        "id":id,
     }
     const APP_ID = import.meta.env.VITE_G_APP_ID
     const baseURL: string = `https://script.google.com/macros/s/${APP_ID}/exec`
 
     return(
         <div id="contenedor" className="bg-fondosecundario flex  justify-center ">
-                                        {/*Selector de herederos directos **: */}
             <div id="tarjeta" className=" flex flex-col items-center bg-fondoprimario rounded-2xl h-full ">
                 <div id="cabecera" className="text-center **:pb-5">
                     <h1 className="font-bold text-5xl text-txtterciario">¡Bienvenido al curso!</h1>
-                    <p className="text-6xl text-txtprimario font-bold">{datosCurso.trayecto}</p>
+                    <p className="text-6xl text-txtprimario font-bold">Cursonombre</p>
                     <p>Por favor, confirme que los datos ingresados sean correctos</p>
                 </div>
                 <div id="datosalumno" className="bg-fondosecundario rounded-lg flex flex-col gap-2 p-5 m-5 **:p-1 **:rounded-md">
@@ -95,22 +104,23 @@ export default function Confirmar(){
                         <span>Fecha de nacimiento: {datosUsuario.nacimiento}</span>
                         <span>Estudios: {datosUsuario.estudios}</span>
                     </div>
-                    <div className="**:bg-fondoprimario gap-2 grid grid-cols-4">
-                        <span>Telefono1: <p>{datosUsuario.telefono1}</p></span>
-                        <span>Telefono2: <p>{datosUsuario.telefono2}</p></span>
-                        <span>Email: <p>{datosUsuario.email}</p></span>
+                    <div className="**:bg-fondoprimario gap-2 grid grid-cols-2 bp750:grid-cols-4">
+                        <span>Telefono1: {datosUsuario.telefono1}</span>
+                        <span>Telefono2: {datosUsuario.telefono2}</span>
+                        <span>Email: {datosUsuario.email}</span>
                     </div>
-                    <div className="**:bg-fondoprimario gap-2 grid grid-cols-4">
-                        <span>Localidad: <p>{datosUsuario.localidad}</p></span>
-                        <span>Calle: <p>{datosUsuario.dir_calle}</p></span>
-                        <span>numero: <p>{datosUsuario.dir_numero}</p></span>
-                        <span>dpto: <p>{datosUsuario.dir_pisodpto}</p></span>
+                    <div className="**:bg-fondoprimario gap-2 grid grid-cols-2 bp750:grid-cols-4">
+                        <span>Localidad: {datosUsuario.localidad}</span>
+                        <span>Calle: {datosUsuario.dir_calle}</span>
+                        <span>numero: {datosUsuario.dir_numero}</span>
+                        <span>dpto: {datosUsuario.dir_pisodpto}</span>
                     </div>
                 </div>
+               
                 <p>Si alguno de los datos es incorrectos, presione el botón Volver</p>
-                <div id="botones" className=' text-txtsecundario flex flex-col bp750:flex-row justify-between gap-5 font-bold '>
-                    <button id="boton" className="bg-red-500 basis-2xl p-3 rounded-lg" onClick={() => navegar(-1)}>Volver</button>
-                    <button id="boton" className="bg-botonprimario basis-2xl p-3 rounded-lg" onClick={() => validaConexionGoogle(datosGoogle, baseURL)}>Confirmar</button>
+                <div id="botones" className=' text-txtsecundario text-center flex flex-col bp750:flex-row justify-between gap-5 font-bold '>
+                    <Link to="/exito" className="bg-red-500 p-3 rounded-lg" onClick={() => navegar(-1)}>Volver</Link>
+                    <Link to="/exito" state={{id: id,  apyn:datosUsuario.nombre + " " + datosUsuario.apellido, }} className="bg-botonprimario p-3 rounded-lg" onClick={() => validaConexionGoogle(datosGoogle, baseURL)} >Confirmar</Link>
                 </div>
             </div> 
             

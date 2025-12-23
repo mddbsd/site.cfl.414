@@ -25,11 +25,11 @@
     https://nekocalc.com/px-to-rem-converter
 */
 @theme {
-    --cflazul: oklch(0.6157 0.2742 260.48);
-    --cflnaranja: oklch(66.6% 0.179 58.318);
-    --cflgris1: oklch(0.8887 0 303);
-    --cflgris2: oklch(0.224 0 0);
-    --cflblanco: oklch(1 0 0);
+    --cflazul: hsl(216.04 100% 56.00000000000001%);
+    --cflnaranja: hsl(30.11 100% 44%);
+    --cflgris1: hsl(340 0% 86%);
+    --cflgris2: hsl(330 0% 11%);
+    --cflblanco: hsl(300 50% 100%);
 
     --color-fondoprimario: var(--cflblanco);
     --color-txttitularprimario: var(--cflazul);
@@ -50,15 +50,17 @@
     --breakpoint-bp750: 47rem;
     --breakpoint-bp600: 37.5rem;
 }
-
+/*
 @layer utilities {
-      /* Esconde el scrollbar en Chrome, Safari y Opera */
+      /* Esconde el scrollbar en Chrome, Safari y Opera 
       .no-scrollbar::-webkit-scrollbar {
           display: none;
       }
-     /* Esconde el scrollbar en IE, Edge and Firefox */
+     /* Esconde el scrollbar en IE, Edge and Firefox 
       .no-scrollbar {
-          -ms-overflow-style: none;  /* IE y Edge */
-          scrollbar-width: none;  /* Firefox */
+          -ms-overflow-style: none;  /* IE y Edge 
+          scrollbar-width: none;  /* Firefox 
     }
   }
+
+*/
