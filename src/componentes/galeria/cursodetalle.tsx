@@ -47,7 +47,7 @@ export default function CursoDetalle(){
                     <div id="horas" className=' text-txtterciario text-center flex gap-1 font-bold shrink-0'>
                         <span className="rounded-sm px-2"><FaRegClock className="text-txtsecundario text-2xl float-right" /></span>
                         <span className="text-lg text-txtsecundario basis-1/5 bp750:basis-1/9">De </span>
-                        {curso.horas.map((hr: number, key) => (<><span key={key} className="text-lg bg-fondoprimario mx-2 px-2 rounded-sm basis-1/8">{formatHoras(hr)}&nbsp;</span>{key == 0 ? <span className="text-lg text-txtsecundario">a</span> : <></>}</>))}
+                        {curso.horas.map((hr: number, key) => (<span key={key} className="text-lg bg-fondoprimario mx-2 px-2 rounded-sm basis-1/8">{formatHoras(hr)}&nbsp;{key == 0 ? <span className="text-lg text-txtsecundario">a</span> : <></>}</span>))}
                     </div>
                     <p className="text-lg text-txtprimario">Todos los cursos se dictan de manera <b>presencial.</b></p>
                 </div>
