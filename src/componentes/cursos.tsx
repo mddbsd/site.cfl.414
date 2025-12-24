@@ -1,7 +1,6 @@
 //componentes
 import { useLoaderData } from 'react-router'
 import TarjetaCurso from './galeria/tarjetacurso'
-import { useState, useEffect, useRef } from 'react';
 
 //tipos
 import type { CursosJson } from '../ts/interfaces';

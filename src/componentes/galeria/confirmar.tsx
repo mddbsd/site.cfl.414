@@ -1,6 +1,6 @@
 import { useActionData } from "react-router";
 import { useNavigate } from "react-router";
-import type { Alumno, ComprobanteDatos } from "../../ts/interfaces";
+import type { Alumno } from "../../ts/interfaces";
 import { Link } from "react-router";
 import { useCurso } from "../outletEnviarDatos";
 import { randomId } from "../../ts/funciones";

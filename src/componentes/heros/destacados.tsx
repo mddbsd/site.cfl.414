@@ -1,20 +1,7 @@
-interface CursoProps{
-    imagen?: string
-    trayecto: string
-    resumen: string
-    duracion: number
-    mesInicio: string
-    matMinima: number
-    matMaxima: number
-}
 //iconos
-import IconoTec from '../../img/iconos/icon_tec.jpg'
-import { IoPeople } from "react-icons/io5";
-import { FaRegClock } from "react-icons/fa";
-import { MdDateRange } from "react-icons/md";
 import type { TarjetaCursoProps } from '../../ts/interfaces'
 import TarjetaCurso from '../galeria/tarjetacurso'
-
+/*
 function CursoDest({imagen, trayecto, resumen, duracion, mesInicio, matMaxima, matMinima}:CursoProps){
     return(
         <>
@@ -37,12 +24,12 @@ function CursoDest({imagen, trayecto, resumen, duracion, mesInicio, matMaxima, m
         <button className='bg-naranjacfl rounded-md mx-20'>Inscribirse</button>
         </>
     )
-}
+}*/
 
 export default function Destacados(){
     //objetos representativos para la galeria de destacados, estos van a ir en un archivo json
     //cuando este todo mas completo
-    const cursosDestacados = [{
+    /*const cursosDestacados = [{
         imagen: IconoTec,
         trayecto: "Programacion Web Full Stack",
         resumen: "Aprendé a desarrollar aplicaciones web modernas con las tecnologías mas demandadas del mercado. HTML, CSS,...",
@@ -66,7 +53,7 @@ export default function Destacados(){
         mesInicio: "Marzo",
         matMinima: 15,
         matMaxima: 25,
-    }]
+    }]*/
 
     const cursosDestacados2: TarjetaCursoProps[] = [
         {
