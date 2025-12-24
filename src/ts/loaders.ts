@@ -36,7 +36,7 @@ export async function loaderCursoDetalle({ params } : { params : Params<"cursoId
 export async function actionConfirmar( { request } : any ){
   const datosForm = await request.formData();
   const control: string = datosForm.get("nv")
-  if(control!){
+  if(control){
     throw new Response("bot", {status: 404});
   }
   const alumno: Alumno = {

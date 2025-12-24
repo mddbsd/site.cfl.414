@@ -93,11 +93,12 @@ async function validaConexionGoogle( datosGoogle: {[key: string]: string}, baseU
                 thumb: datosCurso.thumb
             }, replace: true})
         }else{
-            console.log('Solicitud fallida:', res);
+            console.log('Solicitud fallida:');
             throw new Response("Sin datos", {status: 404})  
         }
     }catch(e){
-      console.error('Error durante la solicitud:', e);
+      console.error('Error durante la solicitud:');
+      throw new Response("Sin datos", {status: 404})
     }
 }
 
