@@ -81,7 +81,7 @@ export default function ExitoPrueba(){
                     </div>
                 </div> 
                 <div id="botones" className=' text-txtsecundario text-center flex justify-between gap-5 font-bold '>
-                    <button className="bg-botonhover p-3 rounded-lg" onClick={()=>console.log("yay")}>Volver</button>
+                    <button className="bg-botonhover p-3 rounded-lg" >Volver</button>
                     <button className="bg-botonhover p-3 rounded-lg" onClick={descargaPdf}>Guardar</button>
                 </div>
                 <section className="infocursos md:w-6/12 p-5">

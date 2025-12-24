@@ -29,9 +29,9 @@ export default function CursoDetalle(){
     return(
         <div id="envcurso">
             <section id="info" className='bg-fondosecundario flex flex-col bp750:flex-row justify-center gap-4 p-3 bp750:p-15 '>
-                <div id="textos" className='text-txtsecundario [&>div]:border [&>div]:border-b-fondoprimario [&>div]:py-2'>
+                <div id="textos" className='basis-1/2 text-txtsecundario [&>div]:border [&>div]:border-b-fondoprimario [&>div]:py-2'>
                     <h1 className='text-5xl font-extrabold'>{curso.trayecto}</h1>
-                    <p className='py-10 text-lg text-txtprimario'>¿Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt minima obcaecati repellat temporibus consequuntur eveniet quod totam sit officiis. Iusto magni velit est, tempora porro ipsa! Quia aspernatur quibusdam amet.</p>
+                    <p className=' py-10 text-lg text-txtprimario'>{curso.descripcion}</p>
                     
                     <div id="mes" className=" text-txtterciario flex text-center gap-1 **:shrink-0 font-bold shrink-0">
                         <span className="rounded-sm px-2"><MdDateRange className="text-txtsecundario text-2xl float-right" /></span>
@@ -52,7 +52,7 @@ export default function CursoDetalle(){
                     <p className="text-lg text-txtprimario">Todos los cursos se dictan de manera <b>presencial.</b></p>
                 </div>
 
-                <div id="heroimagen" className='w-full h-full bp750:float-right'>
+                <div id="heroimagen" className='basis-1/2 w-full h-full bp750:float-right'>
                     <ImagenCurso className="h-max"/>
                 </div>
             </section>
@@ -72,7 +72,7 @@ export default function CursoDetalle(){
             </section>
             <section id="registro" className="bg-fondosecundario flex flex-col items-center">
                 <h1 className='text-5xl text-center font-extrabold text-txtsecundario my-5'>Formulario de inscripción</h1>
-                <div id="envformulario" className="">
+                <div id="envformulario" className="">                                                   {/*Llama a la accion definida en loaders.ts */}
                     <Form className="bp750:w-150 p-5 bg-fondoprimario border-0 shadow-lg sm:rounded-lg" action="confirmar" method="post">
                         <FormularioInscripcion trayecto={curso.trayecto}/>
                         <button className="ml-50 bg-botonprimario hover:bg-botonhover p-2 rounded-md text-txtsecundario" type="submit">Enviar formulario</button>

@@ -59,10 +59,21 @@ export interface Alumno{
     dir_numero: string
     dir_pisodpto: string
     estudios: string
+    control: string
 }
 
 export interface AlumnoPrueba {
     curso: string
     nombre: string
     apellido: string
+}
+
+export interface ComprobanteDatos{
+    id: string
+    apyn:string
+    fecha: Date
+    trayecto: string
+    mes: string
+    dias: string[]
+    horas: number[]
 }

@@ -178,6 +178,17 @@ export default function FormularioInscripcion( {trayecto}: FormProps){
                     <label className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Número</label>
                     <span className="text-sm text-red-600 hidden" id="error">Se requiere Número</span>
                   </div>
+                  <div className="hidden relative z-0 w-full">
+                    <input
+                      type="text"
+                      name="control"
+                      required
+                      defaultValue="nv"
+                      className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+                    />
+                    <label className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Número</label>
+                    <span className="text-sm text-red-600 hidden" id="error">Se requiere Número</span>
+                  </div>
                   <div className="relative z-0 w-full">
                     <input
                       type="text"
@@ -202,7 +213,7 @@ export default function FormularioInscripcion( {trayecto}: FormProps){
                     <option value="Terciario Completo">Terciario Completo</option>
                     <option value="Terciario Incompleto">Terciario Incompleto</option>
                     <option value="Univeritario Incompleto">Univeritario Incompleto</option>
-                    <option value="Universitario Completo<">Universitario Completo</option>
+                    <option value="Universitario Completo">Universitario Completo</option>
                   </select>
                   <label className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Nivel de estudios</label>
                   <span className="text-sm text-red-600 hidden" id="error">Debe elegir una opción</span>

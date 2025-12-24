@@ -52,6 +52,7 @@ export async function actionConfirmar( { request } : any ){
     dir_numero: datosForm.get("dir_numero"),
     dir_pisodpto: datosForm.get("dir_pisodpto"),
     estudios: datosForm.get("estudios"),
+    control: datosForm.get("nv")
   }
   return alumno;
 }

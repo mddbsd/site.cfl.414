@@ -19,7 +19,6 @@ import Confirmar from './componentes/galeria/confirmar'
 import Exito from './componentes/galeria/exito'
 import OutletEnviarDatos from './componentes/outletEnviarDatos'
 import ConfirmarPrueba from './componentes/galeria/confirmarprueba'
-import ExitoPrueba from './componentes/galeria/exitoprueba'
 
 //https://niaxus.com/2025/03/15/como-implementar-lazy-loading-en-react/
 //hay que implementar esto
@@ -67,7 +66,7 @@ const rutasCfl: DataRouter = createBrowserRouter([
       },
       {
         path: "/exito",
-        Component: ExitoPrueba
+        Component: Exito
       },
       {
         path: "/nosotros",

@@ -1,32 +1,15 @@
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import { useRef } from "react";
+import { useLocation } from "react-router";
+import type { ComprobanteDatos } from "../../ts/interfaces";
 
-    /**
-     * Simplemente genera un string aleatorio de 6 digitos, pero con la posibilidad de pasar
-     * la longitud como argumento.
-     * No se verifica que el string ya exista, solo lo genera, sirve para verificar el registro
-     * desde la pagina
-     * 
-     * Primero se genera un numero con Math.random(). Se genera un numero entre 0 y 1,
-     * luego se convierte el numero a un string, el argumento de la funcion es un punto base
-     * le indica a la funcion que reprecente digitos mas alla del 0-9,
-     * Finalmente cortamos el 0. al comienzo del numero decimal y terminar la cadena con el argumento
-     * longitud con .substring(2, length+2)
-     * +2 es para reemplazar los 2 primeros digitos que quitamos al comienzo
-     * 
-     * 
-     * 
-     * @param longitud cantidad de caracteres del string 
-     * @returns string aleatorio
-     */
-    function randomId(longitud: number = 6) {
-        return Math.random().toString(36).substring(2, longitud + 2);
-    }
 export default function Exito(){
  //https://bobbyhadz.com/blog/typescript-expected-0-arguments-but-got-1
     const comprobanteRef = useRef<null | HTMLDivElement>(null);
 
+    const {state} = useLocation();
+    const {id, apyn, fecha, } = state;
     /**
      * Con html2canvas creamos una imagen del elemento de referencia, luego
      * jspdf lo convierte en un archivo pdf
@@ -56,22 +39,23 @@ export default function Exito(){
         pdf.save("comprobante.pdf")
 
     }
+
     return(
         <div>
             <div id="contenedor" className="bg-fondosecundario flex flex-col items-center gap-5">
                 <h1 className="font-bold text-5xl my-5 text-txtsecundario text-center">CFL-414 Comprobante de inscripción</h1>
                 <div id="comprobante" className='flex flex-col bp750:flex-row justify-center border border-b-blue-800'>
                     <div id="envimagen" className=" h-80 overflow-hidden">
-                        <img src={imagen} className='object-cover' />
+                        <img className='object-cover' />
                     </div>
 
                     <div id="datos" ref={comprobanteRef} className='bg-fondoprimario flex flex-col basis-1/2'>
                         <div id="cursoid" className='grid grid-cols-1 ustify-between p-3 **:mb-3'>
-                            <p className="text-4xl text-txtprimario font-bold">Cursonombre</p>
-                            <p className='bg-botonhover text-txtprimario p-2 text-2xl font-bold text-right'>ID: {randomId(5).toUpperCase()}</p>
+                            <p className="text-4xl text-txtprimario font-bold">{id}</p>
+                            <p className='bg-botonhover text-txtprimario p-2 text-2xl font-bold text-right'>ID: </p>
                         </div>
                         <div id="info" className='p-3 **:mb-3'>
-                            <p><b>Alumno: </b> Apellido y nombre</p>
+                            <p><b>Alumno: </b> {apyn}</p>
                             <p><b>Fecha: </b> dd/mm/aa</p>
                             <p><b>Mes de inicio: </b> marzo</p>
                             <p><b>dias de cursada: </b> lunes martes y qseyo</p>

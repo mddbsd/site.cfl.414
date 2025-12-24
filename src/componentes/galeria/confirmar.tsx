@@ -1,9 +1,10 @@
 import { useActionData } from "react-router";
 import { useNavigate } from "react-router";
-import type { Alumno } from "../../ts/interfaces";
+import type { Alumno, ComprobanteDatos } from "../../ts/interfaces";
 import { Link } from "react-router";
 import { useCurso } from "../outletEnviarDatos";
 import { randomId } from "../../ts/funciones";
+import { useState } from "react";
 //props: todos los datos del usuario,
 //en este componente va el captcha y la logica de subida a la API
 
@@ -21,41 +22,25 @@ function cargaDatos(){
     }
     return useActionData()
 }
-/**
- * Recibe los datos formateados y la url con la key de google
- * los datos se suben en formato Formulario, armamos el payload con el objeto datosGoogle
- * luego se llama a la api con baseUrl y el payload como cuerpo
- * 
- * @param datosGoogle datos formateados
- * @param baseURL url con la key de google
- */
-async function validaConexionGoogle( datosGoogle: {[key: string]: string}, baseURL: string){
-    const payload = new FormData()
-    Object.keys(datosGoogle).forEach((key) => {
-              payload.append(key, datosGoogle[key])
-            })
-    try {
-        const res = await fetch(baseURL, {
-            method: 'POST',
-            body: payload,
-        })
-        if(res.ok){
-            console.log('Subido con exito:', res);
-        }else{
-            console.log('Solicitud fallida:', res);  
-        }
-    }catch(e){
-      console.error('Error durante la solicitud:', e);
-    }
-}
+
 
 export default function Confirmar(){
-
+    const [estaCargando, setEstaCargando]= useState(false)
     const datosUsuario: Alumno = cargaDatos()
     const datosCurso = useCurso();
     const navegar = useNavigate();
     const fecha: Date = new Date();
     const id = randomId();
+    const datosComprobante :ComprobanteDatos = {
+        id: id,  
+        apyn:datosUsuario.nombre + " " + datosUsuario.apellido, 
+        fecha: fecha, 
+        trayecto: datosCurso.trayecto, 
+        mes: datosCurso.mes, dias:datosCurso.dias, 
+        horas: datosCurso.horas
+    }
+
+
     //este objeto se almacena la informacion formateada para la api de google
     //El objeto necesita un formato para ser leido por el script de google, 
     //Cada atributo representa el nombre de la columna donde va a ser almacenado 
@@ -81,9 +66,52 @@ export default function Confirmar(){
         "direccion":datosUsuario.dir_calle + " " + datosUsuario.dir_numero + " " + (datosUsuario.dir_pisodpto != "" ? "dpto: " + datosUsuario.dir_pisodpto  : ""),
         "estudios":datosUsuario.estudios,
         "id":id,
+        "nv": datosUsuario.control
     }
     const APP_ID = import.meta.env.VITE_G_APP_ID
     const baseURL: string = `https://script.google.com/macros/s/${APP_ID}/exec`
+
+    /**
+ * Recibe los datos formateados y la url con la key de google
+ * los datos se suben en formato Formulario, armamos el payload con el objeto datosGoogle
+ * luego se llama a la api con baseUrl y el payload como cuerpo
+ * 
+ * @param datosGoogle datos formateados
+ * @param baseURL url con la key de google
+ */
+function sleep(time: number) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+async function validaConexionGoogle( datosGoogle: {[key: string]: string}, baseURL: string){
+    setEstaCargando(true);
+    await sleep(2000);
+    const payload = new FormData()
+    Object.keys(datosGoogle).forEach((key) => {
+              payload.append(key, datosGoogle[key])
+            })
+    try {
+        const res = await fetch(baseURL, {
+            method: 'POST',
+            body: payload,
+        })
+        if(res.ok){
+            console.log('Subido con exito:', res);
+            return navegar("/exito", {state: {        
+                id: id,  
+                apyn:datosUsuario.nombre + " " + datosUsuario.apellido, 
+                fecha: fecha, 
+                trayecto: datosCurso.trayecto, 
+                mes: datosCurso.mes, dias:datosCurso.dias, 
+                horas: datosCurso.horas
+            }, replace: true})
+        }else{
+            console.log('Solicitud fallida:', res);
+            throw new Response("Sin datos", {status: 404})  
+        }
+    }catch(e){
+      console.error('Error durante la solicitud:', e);
+    }
+}
 
     return(
         <div id="contenedor" className="bg-fondosecundario flex  justify-center ">
@@ -93,6 +121,10 @@ export default function Confirmar(){
                     <p className="text-6xl text-txtprimario font-bold">Cursonombre</p>
                     <p>Por favor, confirme que los datos ingresados sean correctos</p>
                 </div>
+                {
+                    estaCargando ? <>espere...</> :
+                <>
+
                 <div id="datosalumno" className="bg-fondosecundario rounded-lg flex flex-col gap-2 p-5 m-5 **:p-1 **:rounded-md">
                     <div className="**:bg-fondoprimario gap-2 grid grid-cols-2 bp750:grid-cols-4">
                         <span>Nombre: {datosUsuario.nombre}</span>
@@ -120,8 +152,9 @@ export default function Confirmar(){
                 <p>Si alguno de los datos es incorrectos, presione el botón Volver</p>
                 <div id="botones" className=' text-txtsecundario text-center flex flex-col bp750:flex-row justify-between gap-5 font-bold '>
                     <Link to="/exito" className="bg-red-500 p-3 rounded-lg" onClick={() => navegar(-1)}>Volver</Link>
-                    <Link to="/exito" state={{id: id,  apyn:datosUsuario.nombre + " " + datosUsuario.apellido, }} className="bg-botonprimario p-3 rounded-lg" onClick={() => validaConexionGoogle(datosGoogle, baseURL)} >Confirmar</Link>
+                    <button className="bg-botonprimario p-3 rounded-lg" onClick={() => validaConexionGoogle(datosGoogle, baseURL)} >Confirmar</button>
                 </div>
+                </>}
             </div> 
             
         </div>
