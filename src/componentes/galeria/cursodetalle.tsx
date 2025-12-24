@@ -35,7 +35,7 @@ export default function CursoDetalle(){
                     
                     <div id="mes" className=" text-txtterciario flex text-center gap-1 **:shrink-0 font-bold shrink-0">
                         <span className="rounded-sm px-2"><MdDateRange className="text-txtsecundario text-2xl float-right" /></span>
-                        <span className="text-lg text-txtsecundario basis-1/5 bp750:basis-1/9">Inicia en</span>
+                        <span className="text-lg text-txtsecundario basis-1/5 bp750:basis-1/8">Inicia en</span>
                         <span className='text-lg bg-fondoprimario mx-2 px-2 rounded-sm basis-1/8'>{curso.mes}</span>
                     </div> 
                      

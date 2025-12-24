@@ -1,12 +1,12 @@
 [
     {
         "idCurso":0,
-        "trayecto":"Tapicero",
+        "trayecto":"Tapicero/a",
         "familia":"MM",
         "cargaHoraria":80,
         "mes":"Marzo",
         "dias":["Lunes", "Miercoles"],
-        "horas":[900, 1130],
+        "horas":[900, 1220],
         "thumb":"cuero",
         "imagen":"",
         "resumen":"",
@@ -17,21 +17,21 @@
         "matriculaMax":20,
         "centro":"Sede Central",
         "sede":{
-                "idSede":1,
-                "nombre":"Acuario",
-                "localidad":"Gonzales Catan",
-                "direccion":"Av. Juan Manuel de Rosas 16225",
-                "gps":[-34.76527232672389, -58.61736141857755]
-            }        
+                "idSede":4,
+                "nombre":"Polo Productivo",
+                "localidad":"La Tablada",
+                "direccion":"Av. Crovara 2045",
+                "gps":[-34.685211938416685, -58.51913752408135]
+            }      
     },
     {
         "idCurso":1,
-        "trayecto":"Tapicero",
+        "trayecto":"Tapicero/a",
         "familia":"MM",
         "cargaHoraria":80,
         "mes":"Marzo",
         "dias":["Martes", "Jueves"],
-        "horas":[900, 1130],
+        "horas":[900, 1200],
         "thumb":"cuero",
         "imagen":"",
         "resumen":"",
@@ -56,7 +56,7 @@
         "cargaHoraria":75,
         "mes":"Abril",
         "dias":["Lunes", "Viernes"],
-        "horas":[900, 1130],
+        "horas":[900, 1220],
         "thumb":"turistico",
         "imagen":"",
         "resumen":"",
@@ -80,8 +80,8 @@
         "familia":"OA",
         "cargaHoraria":80,
         "mes":"Marzo",
-        "dias":["Martes", "Jueves"],
-        "horas":[1800, 2020],
+        "dias":["Martes", "Jueves", "Viernes"],
+        "horas":[1700, 2020],
         "thumb":"cuero",
         "imagen":"",
         "resumen":"",
@@ -106,7 +106,7 @@
         "cargaHoraria":75,
         "mes":"Marzo",
         "dias":["Martes", "Jueves"],
-        "horas":[1300, 1530],
+        "horas":[1300, 1500],
         "thumb":"comunica",
         "imagen":"",
         "resumen":"",
@@ -117,21 +117,21 @@
         "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
-                "idSede":4,
-                "nombre":"San Justo",
-                "localidad":"San Justo",
-                "direccion":"Perú 2460",
-                "gps":[-34.678922846113466, -58.55932284395559]
+                "idSede":0,
+                "nombre":"Central",
+                "localidad":"Lomas del Mirador",
+                "direccion":"Posadas 601",
+                "gps":[-34.654258685697116, -58.538385027181555]
             }        
     },
     {
         "idCurso":5,
-        "trayecto":"Piel y Anexos Cutaneos",
+        "trayecto":"Maquillador/a Profesional",
         "familia":"SP",
         "cargaHoraria":36,
         "mes":"Marzo",
-        "dias":["Martes", "Jueves"],
-        "horas":[1300, 1530],
+        "dias":["Lunes", "Miercoles", "Viernes"],
+        "horas":[830, 1150],
         "thumb":"estetica",
         "imagen":"",
         "resumen":"",
@@ -156,7 +156,7 @@
         "cargaHoraria":36,
         "mes":"Marzo",
         "dias":["Lunes", "Miercoles"],
-        "horas":[830, 1100],
+        "horas":[830, 1110],
         "thumb":"costura",
         "imagen":"",
         "resumen":"",
@@ -181,7 +181,7 @@
         "cargaHoraria":75,
         "mes":"Marzo",
         "dias":["Lunes", "Miercoles"],
-        "horas":[1400, 16300],
+        "horas":[1330, 1650],
         "thumb":"turistico",
         "imagen":"",
         "resumen":"",
@@ -206,7 +206,7 @@
         "cargaHoraria":75,
         "mes":"Marzo",
         "dias":["Martes", "Jueves"],
-        "horas":[900, 1130],
+        "horas":[900, 1220],
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
@@ -231,7 +231,7 @@
         "cargaHoraria":75,
         "mes":"Marzo",
         "dias":["Martes", "Jueves"],
-        "horas":[1400, 1630],
+        "horas":[1320, 1530],
         "thumb":"turistico",
         "imagen":"",
         "resumen":"",
@@ -256,7 +256,7 @@
         "cargaHoraria":80,
         "mes":"Marzo",
         "dias":["Lunes", "Miercoles", "Viernes"],
-        "horas":[900, 1130],
+        "horas":[900, 1220],
         "thumb":"tec",
         "imagen":"",
         "resumen":"",
@@ -276,12 +276,12 @@
     },
     {
         "idCurso":11,
-        "trayecto":"Prototipado de Videojuegos",
+        "trayecto":"Modelado e Impresión 3D",
         "familia":"IM-2026-35",
         "cargaHoraria":80,
         "mes":"Marzo",
         "dias":["Lunes", "Miercoles", "Viernes"],
-        "horas":[1300, 1530],
+        "horas":[1300, 1540],
         "thumb":"tec",
         "imagen":"",
         "resumen":"",
@@ -306,7 +306,7 @@
         "cargaHoraria":80,
         "mes":"Marzo",
         "dias":["Lunes", "Miercoles"],
-        "horas":[830, 1100],
+        "horas":[830, 1150],
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
@@ -331,7 +331,7 @@
         "cargaHoraria":45,
         "mes":"Marzo",
         "dias":["Martes", "Jueves"],
-        "horas":[1400, 1630],
+        "horas":[1330, 1610],
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
@@ -355,8 +355,8 @@
         "familia":"OC",
         "cargaHoraria":80,
         "mes":"Marzo",
-        "dias":["Lunes", "Miercoles"],
-        "horas":[1800, 2030],
+        "dias":["Lunes", "Miercoles", "Jueves"],
+        "horas":[1700, 2100],
         "thumb":"construccion",
         "imagen":"",
         "resumen":"",
@@ -381,7 +381,7 @@
         "cargaHoraria":80,
         "mes":"Marzo",
         "dias":["Lunes", "Miercoles"],
-        "horas":[1710, 1930],
+        "horas":[1200, 1430],
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
@@ -406,7 +406,7 @@
         "cargaHoraria":80,
         "mes":"Marzo",
         "dias":["Martes", "Jueves"],
-        "horas":[900, 1130],
+        "horas":[900, 1220],
         "thumb":"turistico",
         "imagen":"",
         "resumen":"",
@@ -431,7 +431,7 @@
         "cargaHoraria":75,
         "mes":"Marzo",
         "dias":["Martes", "Jueves"],
-        "horas":[1300, 1530],
+        "horas":[1300, 1600],
         "thumb":"estetica",
         "imagen":"",
         "resumen":"",
@@ -456,7 +456,7 @@
         "cargaHoraria":75,
         "mes":"Marzo",
         "dias":["Lunes", "Miercoles"],
-        "horas":[1330, 1600],
+        "horas":[1500, 1730],
         "thumb":"estetica",
         "imagen":"",
         "resumen":"",
@@ -481,7 +481,7 @@
         "cargaHoraria":24,
         "mes":"Marzo",
         "dias":["Miercoles"],
-        "horas":[1300, 1530],
+        "horas":[1300, 1500],
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
@@ -492,12 +492,12 @@
         "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
-                "idSede":4,
-                "nombre":"Polo Productivo",
-                "localidad":"La Tablada",
-                "direccion":"Av. Crovara 2045",
-                "gps":[-34.685211938416685, -58.51913752408135]
-            }        
+                "idSede":0,
+                "nombre":"Central",
+                "localidad":"Lomas del Mirador",
+                "direccion":"Posadas 601",
+                "gps":[-34.654258685697116, -58.538385027181555]
+            }     
     },
     {
         "idCurso":20,
@@ -506,7 +506,7 @@
         "cargaHoraria":80,
         "mes":"Marzo",
         "dias":["Martes", "Viernes"],
-        "horas":[1700, 1930],
+        "horas":[1700, 2020],
         "thumb":"tec",
         "imagen":"",
         "resumen":"",
@@ -517,11 +517,11 @@
         "matriculaMin":15,
         "centro":"Sede Central",
         "sede":{
-                "idSede":4,
-                "nombre":"San Justo",
-                "localidad":"San Justo",
-                "direccion":"Perú 2460",
-                "gps":[-34.678922846113466, -58.55932284395559]
+                "idSede":0,
+                "nombre":"Central",
+                "localidad":"Lomas del Mirador",
+                "direccion":"Posadas 601",
+                "gps":[-34.654258685697116, -58.538385027181555]
             }
     },
     {
@@ -531,7 +531,7 @@
         "cargaHoraria":80,
         "mes":"Marzo",
         "dias":["Miercoles", "Viernes"],
-        "horas":[1330, 1600],
+        "horas":[1330, 1610],
         "thumb":"administracion",
         "imagen":"",
         "resumen":"",
@@ -555,8 +555,8 @@
         "familia":"OC",
         "cargaHoraria":70,
         "mes":"Marzo",
-        "dias":["Miercoles", "Viernes"],
-        "horas":[1800, 2030],
+        "dias":["Lunes", "Miercoles", "Viernes"],
+        "horas":[1730, 2050],
         "thumb":"construccion",
         "imagen":"",
         "resumen":"",
@@ -574,9 +574,17 @@
                 "gps":[-34.654258685697116, -58.538385027181555]
             }
     },
+
+
+
+
+
+
+
+
     {
         "idCurso":23,
-        "trayecto":"Circuitos Electricos y Mediciones",
+        "trayecto":"Montador/a Electricista Domiciliario",
         "familia":"EE",
         "cargaHoraria":80,
         "mes":"Marzo",
@@ -624,6 +632,9 @@
                 "gps":[-34.76527232672389, -58.61736141857755]
             } 
     },
+
+
+
     {
         "idCurso":25,
         "trayecto":"Manicuría",
@@ -647,7 +658,7 @@
                 "localidad":"Gonzales Catan",
                 "direccion":"Av. Juan Manuel de Rosas 16225",
                 "gps":[-34.76527232672389, -58.61736141857755]
-            } 
+            }  
     },
     {
         "idCurso":26,
@@ -742,12 +753,12 @@
         "matriculaMin":15,
         "centro":"Anexo Catan",
         "sede":{
-                "idSede":5,
-                "nombre":"Suetra",
-                "localidad":"San Justo",
-                "direccion":"Jose Francisco Marcon 3385",
-                "gps":[-34.681288249151759, -58.55861945767306]
-            }
+                "idSede":1,
+                "nombre":"Acuario",
+                "localidad":"Gonzales Catan",
+                "direccion":"Av. Juan Manuel de Rosas 16225",
+                "gps":[-34.76527232672389, -58.61736141857755]
+            }  
     },
     {
         "idCurso":30,
@@ -756,7 +767,7 @@
         "cargaHoraria":75,
         "mes":"Marzo",
         "dias":["Martes","Jueves"],
-        "horas":[930, 1200],
+        "horas":[930, 120],
         "thumb":"estetica",
         "imagen":"",
         "resumen":"",
@@ -781,7 +792,7 @@
         "cargaHoraria":75,
         "mes":"Marzo",
         "dias":["Martes","Jueves"],
-        "horas":[930, 1200],
+        "horas":[900, 1220],
         "thumb":"tec",
         "imagen":"",
         "resumen":"",

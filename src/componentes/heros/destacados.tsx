@@ -12,6 +12,8 @@ import IconoTec from '../../img/iconos/icon_tec.jpg'
 import { IoPeople } from "react-icons/io5";
 import { FaRegClock } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
+import type { TarjetaCursoProps } from '../../ts/interfaces'
+import TarjetaCurso from '../galeria/tarjetacurso'
 
 function CursoDest({imagen, trayecto, resumen, duracion, mesInicio, matMaxima, matMinima}:CursoProps){
     return(
@@ -65,16 +67,53 @@ export default function Destacados(){
         matMinima: 15,
         matMaxima: 25,
     }]
+
+    const cursosDestacados2: TarjetaCursoProps[] = [
+        {
+            id: 25,
+            trayecto: "Manicuría",
+            thumb:"estetica",
+            mes:"Marzo",
+            cargaHoraria: 20,
+            matriculaMax:20,
+            matriculaMin:15,
+            localidad:"Gonzales Catan"
+         
+        },
+                {
+            id: 25,
+            trayecto: "Manicuría",
+            thumb:"estetica",
+            mes:"Marzo",
+            cargaHoraria: 20,
+            matriculaMax:20,
+            matriculaMin:15,
+            localidad:"Gonzales Catan"
+         
+        },
+                {
+            id: 25,
+            trayecto: "Manicuría",
+            thumb:"estetica",
+            mes:"Marzo",
+            cargaHoraria: 20,
+            matriculaMax:20,
+            matriculaMin:15,
+            localidad:"Gonzales Catan"
+         
+        }
+    ]
     return(
         <div id="destacados" className='flex flex-col items-center pb-10'>
             <div id="texto" className="flex flex-col gap-10 text-center py-10">
                 <h2 className="text-txttitularprimario text-5xl font-bold">Cursos Destacados</h2>
                 <p className="text-txtprimario text-2xl">Descubrí nuestros ṕrogramas de formación profesional diseñados para las demandas del mercado actual</p>
             </div> 
-            <div id="galeriadestacados" className='flex flex-wrap bp750:flex-nowrap justify-between mb-8'>
-                {cursosDestacados.map((curso, key)=>(
-                    <div id="cursodestacado" key={key} className='shadow-xl/20 m-5 pb-2 flex flex-col rounded-2xl overflow-hidden'>
-                        <CursoDest {...curso} />
+            <div id="galeriadestacados" className='flex flex-wrap bp750:flex-nowrap w-full justify-between mb-8'>
+                {cursosDestacados2.map((curso, key)=>(
+                    <div id="cursodestacado" key={key} className='basis-1/3 shadow-xl/20 m-5 pb-2 flex flex-col rounded-2xl overflow-hidden'>
+                        <TarjetaCurso {...curso} />
+                        
                     </div>
                 ))}
             </div>

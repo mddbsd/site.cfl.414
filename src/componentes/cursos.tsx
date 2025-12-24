@@ -45,14 +45,6 @@ export default function Cursos(){
                     </div>                  
                 ))}
             </div>
-            <h2 className='text-txtsecundario text-center bp750:text-left font-extrabold text-4xl ml-5'>San Justo</h2>
-            <div id="galeriacursos" className='grid auto-cols-max grid-flow-col mb-8 snap-x overflow-y-scroll no-scrollbar'> {/*flex gap-3 p-5 scroll-auto snap-x overflow-y-scroll no-scrollbar */}
-                {filtrarLocalidad(cursosJson,"San Justo").map((curso,key) => (
-                    <div id="curso" key={key} className='bg-fondoprimario shadow-xl/20 m-5 pb-2 flex flex-col rounded-2xl overflow-hidden shrink-0 snap-center w-100'>
-                        <TarjetaCurso id={curso.idCurso} trayecto={curso.trayecto} thumb={curso.thumb} resumen={curso.resumen} mes={curso.mes} cargaHoraria={curso.cargaHoraria} localidad={curso.sede.localidad} matriculaMax={curso.matriculaMax} matriculaMin={curso.matriculaMin}/>
-                    </div>                  
-                ))}
-            </div>
             <h2 className='text-txtsecundario text-center bp750:text-left font-extrabold text-4xl ml-5'>La Tablada</h2>
             <div id="galeriacursos" className='grid auto-cols-max grid-flow-col mb-8 snap-x overflow-y-scroll no-scrollbar'> {/*flex gap-3 p-5 scroll-auto snap-x overflow-y-scroll no-scrollbar */}
                 {filtrarLocalidad(cursosJson,"La Tablada").map((curso,key) => (

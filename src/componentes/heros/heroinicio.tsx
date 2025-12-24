@@ -11,8 +11,8 @@ export default function HeroInicio(){
                 <h1 className='text-5xl font-extrabold'>Transformá tu futuro con educación de calidad</h1>
                 <p className='py-10 text-lg'>En CFL 414 La Matanza ofrecemos formación profesional gratuita con certificación oficial para potenciar tu desarrollo personal y laboral.</p>
                 <div id="herobotones" className='text-txtterciario flex flex-col bp750:flex-row gap-10 font-bold [&_#boton]:bg-botonsecundario [&_#boton]:hover:bg-botonhover [&_#boton]:hover:text-txtsecundario [&_#boton]:rounded-md [&_#boton]:p-5 [&_#boton]:shrink-0'>
-                    <Link id="boton" to="/">Ver cursos disponibles</Link>
-                    <Link id="boton" to="/">Más información</Link>
+                    <Link id="boton" to="/cursos">Ver cursos disponibles</Link>
+                    <Link id="boton" to="/nosotros">Más información</Link>
                 </div>
             </div>
             <div id="heroimagen" className='order-first bp750:order-last'>
