@@ -59,7 +59,7 @@ export interface Alumno{
     dir_numero: string
     dir_pisodpto: string
     estudios: string
-    control: string
+    control?: string
 }
 
 export interface AlumnoPrueba {
@@ -76,4 +76,5 @@ export interface ComprobanteDatos{
     mes: string
     dias: string[]
     horas: number[]
+    thumb: string
 }

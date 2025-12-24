@@ -3,13 +3,15 @@ import jsPDF from "jspdf";
 import { useRef } from "react";
 import { useLocation } from "react-router";
 import type { ComprobanteDatos } from "../../ts/interfaces";
+import ThumbCategoria from "../../img/iconos/thumbs";
+import { formatHoras } from "../../ts/funciones";
 
 export default function Exito(){
  //https://bobbyhadz.com/blog/typescript-expected-0-arguments-but-got-1
     const comprobanteRef = useRef<null | HTMLDivElement>(null);
 
     const {state} = useLocation();
-    const {id, apyn, fecha, } = state;
+    const {id, apyn, fecha, trayecto, mes, dias, horas, thumb }: ComprobanteDatos = state;
     /**
      * Con html2canvas creamos una imagen del elemento de referencia, luego
      * jspdf lo convierte en un archivo pdf
@@ -21,7 +23,7 @@ export default function Exito(){
         //si el elemento esta vacio termina la ejecucion e informa por consola
         if (!elemento){
             console.log("sin elemento")
-            return;
+            throw new Response("Sin datos", {status: 404});
         }
         const canvas =  await html2canvas(elemento, {scale: 2})
         const imagen =  canvas.toDataURL("image/png")
@@ -36,7 +38,7 @@ export default function Exito(){
         const pdfW = pdf.internal.pageSize.getWidth();
         const pdfH = (propiedadesImagen.height * pdfW) / propiedadesImagen.width;
         pdf.addImage(imagen, "png", 0, 0, pdfW, pdfH);
-        pdf.save("comprobante.pdf")
+        pdf.save(`comprobante-${id}.pdf`)
 
     }
 
@@ -45,21 +47,21 @@ export default function Exito(){
             <div id="contenedor" className="bg-fondosecundario flex flex-col items-center gap-5">
                 <h1 className="font-bold text-5xl my-5 text-txtsecundario text-center">CFL-414 Comprobante de inscripción</h1>
                 <div id="comprobante" className='flex flex-col bp750:flex-row justify-center border border-b-blue-800'>
-                    <div id="envimagen" className=" h-80 overflow-hidden">
-                        <img className='object-cover' />
+                    <div id="envimagen" className=" h-90 overflow-hidden">
+                        <ThumbCategoria imagen={thumb} className="object-cover"/>
                     </div>
 
                     <div id="datos" ref={comprobanteRef} className='bg-fondoprimario flex flex-col basis-1/2'>
                         <div id="cursoid" className='grid grid-cols-1 ustify-between p-3 **:mb-3'>
-                            <p className="text-4xl text-txtprimario font-bold">{id}</p>
-                            <p className='bg-botonhover text-txtprimario p-2 text-2xl font-bold text-right'>ID: </p>
+                            <p className="text-4xl text-txtprimario font-bold">{trayecto}</p>
+                            <p className='bg-botonhover text-txtprimario p-2 text-2xl font-bold text-right'>ID: {id}</p>
                         </div>
                         <div id="info" className='p-3 **:mb-3'>
                             <p><b>Alumno: </b> {apyn}</p>
-                            <p><b>Fecha: </b> dd/mm/aa</p>
-                            <p><b>Mes de inicio: </b> marzo</p>
-                            <p><b>dias de cursada: </b> lunes martes y qseyo</p>
-                            <p><b>horas: </b> acavanlashoras</p>
+                            <p><b>Fecha: </b> {fecha.toLocaleDateString("es-AR")}</p>
+                            <p><b>Mes de inicio: </b> {mes}</p>
+                            <p><b>dias de cursada: </b>{dias.map((e) => e + " ")}</p>
+                            <p><b>horas: </b> {formatHoras(horas[0]) + " a " + formatHoras(horas[1])}</p>
                         </div>
                     </div>
                 </div> 

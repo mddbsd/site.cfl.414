@@ -31,15 +31,6 @@ export default function Confirmar(){
     const navegar = useNavigate();
     const fecha: Date = new Date();
     const id = randomId();
-    const datosComprobante :ComprobanteDatos = {
-        id: id,  
-        apyn:datosUsuario.nombre + " " + datosUsuario.apellido, 
-        fecha: fecha, 
-        trayecto: datosCurso.trayecto, 
-        mes: datosCurso.mes, dias:datosCurso.dias, 
-        horas: datosCurso.horas
-    }
-
 
     //este objeto se almacena la informacion formateada para la api de google
     //El objeto necesita un formato para ser leido por el script de google, 
@@ -66,7 +57,6 @@ export default function Confirmar(){
         "direccion":datosUsuario.dir_calle + " " + datosUsuario.dir_numero + " " + (datosUsuario.dir_pisodpto != "" ? "dpto: " + datosUsuario.dir_pisodpto  : ""),
         "estudios":datosUsuario.estudios,
         "id":id,
-        "nv": datosUsuario.control
     }
     const APP_ID = import.meta.env.VITE_G_APP_ID
     const baseURL: string = `https://script.google.com/macros/s/${APP_ID}/exec`
@@ -79,12 +69,9 @@ export default function Confirmar(){
  * @param datosGoogle datos formateados
  * @param baseURL url con la key de google
  */
-function sleep(time: number) {
-  return new Promise((resolve) => setTimeout(resolve, time));
-}
+
 async function validaConexionGoogle( datosGoogle: {[key: string]: string}, baseURL: string){
     setEstaCargando(true);
-    await sleep(2000);
     const payload = new FormData()
     Object.keys(datosGoogle).forEach((key) => {
               payload.append(key, datosGoogle[key])
@@ -102,7 +89,8 @@ async function validaConexionGoogle( datosGoogle: {[key: string]: string}, baseU
                 fecha: fecha, 
                 trayecto: datosCurso.trayecto, 
                 mes: datosCurso.mes, dias:datosCurso.dias, 
-                horas: datosCurso.horas
+                horas: datosCurso.horas,
+                thumb: datosCurso.thumb
             }, replace: true})
         }else{
             console.log('Solicitud fallida:', res);

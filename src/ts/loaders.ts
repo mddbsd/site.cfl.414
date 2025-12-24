@@ -35,6 +35,10 @@ export async function loaderCursoDetalle({ params } : { params : Params<"cursoId
 
 export async function actionConfirmar( { request } : any ){
   const datosForm = await request.formData();
+  const control: string = datosForm.get("nv")
+  if(control!){
+    throw new Response("bot", {status: 404});
+  }
   const alumno: Alumno = {
     curso: datosForm.get("curso"),
     nombre: datosForm.get("nombre"),
@@ -52,7 +56,6 @@ export async function actionConfirmar( { request } : any ){
     dir_numero: datosForm.get("dir_numero"),
     dir_pisodpto: datosForm.get("dir_pisodpto"),
     estudios: datosForm.get("estudios"),
-    control: datosForm.get("nv")
   }
   return alumno;
 }

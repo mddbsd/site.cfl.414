@@ -33,3 +33,12 @@ export function formatHoras( hr: number){
 export function randomId(longitud: number = 5) {
   return Math.random().toString(36).substring(2, longitud + 2);
 }
+/**
+ * Una funcion para detener la ejecucion y que espere por x cantidad de milisegundos
+ * 
+ * @param time tiempo en milisegundos
+ * @returns 
+ */
+export function sleep(time: number) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
